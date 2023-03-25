@@ -124,14 +124,13 @@ body {
   align-items: center;
   background-color: #f8f8f8;
   padding: 20px 20px;
-  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.7); 
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.7);
 
   margin-bottom: 2%;
-
 }
 
-.how-it-works{
-    padding: 2% 2%;
+.how-it-works {
+  padding: 2% 2%;
 }
 
 #cart-icon,
@@ -148,22 +147,17 @@ body {
   color: green;
 }
 
-#cart-count, #wishlist-count {
-    display: inline-block;
-    width: 1.5em;
-    height: 1.5em;
-    line-height: 1.5em;
-    text-align: center;
-    color: green;
-  
-   
-  }
+#cart-count,
+#wishlist-count {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5em;
+  text-align: center;
+  color: green;
+}
 
-  /* How it Works? */
-
-  
-
-
+/* How it Works? */
 
 /* Style for the marketplace area */
 .marketplace-area {
@@ -181,9 +175,8 @@ body {
   margin: 1% 1%;
 }
 
-.cart{
-    margin: 1% 1%;
-
+.cart {
+  margin: 1% 1%;
 }
 
 /* Style for the product cards */
@@ -413,7 +406,6 @@ button {
   color: #fff;
 }
 
-
 /*----------------------footer styling---------------------*/
 
 .fa,
@@ -507,7 +499,6 @@ footer {
   .supported-orgs {
     margin-right: 0;
   }
-}
 }
 
 /* Give more space to newsletter section */

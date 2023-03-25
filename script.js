@@ -208,6 +208,7 @@ confirmButton.addEventListener('click', () => {
 });
 
 
+// Wishlist (Add sa counter and update if may naremove)
 const wishlistBtns = document.querySelectorAll(".add-to-wishlist");
 
 wishlistBtns.forEach((btn) => {
@@ -256,6 +257,7 @@ window.addEventListener("load", () => {
 });
 
 
+// Function for the Reset Wishlist
 
 function resetWishlist() {
   // Clear the localStorage
