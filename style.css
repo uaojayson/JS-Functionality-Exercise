@@ -9,40 +9,167 @@
   font-family: "Maven Pro", sans-serif;
 }
 
+:root {
+  --background-color: #5bbb1f;
+  /* --background-color: rgb(56, 216, 96); */
+  --text-gray-color: rgb(68, 68, 68);
+  --text-dark-color: rgb(12, 12, 12);
+}
+
+body {
+  font-family: "Maven Pro", sans-serif;
+  overflow-x: hidden;
+}
+/* --------------------header styling---------------- */
+
+#logo {
+  color: var(--text-dark-color);
+  font-size: 22px;
+  font-family: "Montserrat", sans-serif;
+}
+#logo > span {
+  color: var(--background-color);
+  font-size: 24px;
+}
+.navbar-nav li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 550;
+}
+.navbar-nav li > a {
+  color: rgb(68, 68, 68);
+}
+.navbar-nav li > a:hover {
+  color: var(--text-dark-color);
+  border-bottom: 1px solid var(--background-color);
+}
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+.dropdown > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  color: var(--text-color);
+}
+.dropdown a > p {
+  margin-left: 0.2rem;
+}
+.dropdown:hover .menu {
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+}
+.menu > a {
+  font-size: 14px;
+  padding: 8px 20px;
+}
+.menu > a:hover {
+  background-color: rgb(222, 224, 224);
+}
+.menu {
+  position: absolute;
+  top: 40px;
+  right: -20px;
+  display: grid;
+  width: 180px;
+  padding: 8px 0;
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #e1e1e1;
+  box-shadow: 0 40px 40px rgb(0 0 0 / 6%);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.25s;
+}
+.menu::before {
+  content: "";
+  background: inherit;
+  border-top: 1px solid #e1e1e1;
+  border-right: 1px solid #e1e1e1;
+  position: absolute;
+  top: -7px;
+  right: 22px;
+  width: 12px;
+  height: 12px;
+  rotate: -45deg;
+}
+
+.signupAndLoginButtons #signupButton {
+  border: 1px solid var(--background-color);
+  color: var(--background-color);
+}
+.signupAndLoginButtons #loginButton {
+  background-color: var(--background-color);
+  color: #fff;
+}
+
+/*----------------------banner marketplace styling---------------------*/
+
+.marketplace_banner {
+  background-image: url(images/marketplace-bg-final.jpg);
+  background-position: center;
+  background-size: cover;
+  min-height: 50vh;
+}
+
 /* Style for the top area */
 .top-area {
   display: grid;
-  justify-content: end;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
   align-items: center;
   background-color: #f8f8f8;
   padding: 20px 20px;
-  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.7);
-  margin: 3% 4%;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.7); 
+
+  margin-bottom: 2%;
+
+}
+
+.how-it-works{
+    padding: 2% 2%;
 }
 
 #cart-icon,
 #wishlist-icon {
   display: flex;
-  align-items: center;
+  justify-content: end;
   border-bottom: 1px solid #ccc;
 }
 
 #cart-icon i,
 #wishlist-icon i {
   margin-right: 10px;
-  font-size: 24px;
+  font-size: 20px;
   color: green;
 }
 
-.badge {
-  color: black;
-  font-size: 20px;
-}
+#cart-count, #wishlist-count {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    line-height: 1.5em;
+    text-align: center;
+    color: green;
+  
+   
+  }
+
+  /* How it Works? */
+
+  
+
+
 
 /* Style for the marketplace area */
 .marketplace-area {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-row: auto;
+  grid-template-columns: 1fr 3fr 1fr;
   gap: 20px;
 }
 
@@ -52,6 +179,11 @@
   grid-gap: 10px;
   grid-template-rows: auto;
   margin: 1% 1%;
+}
+
+.cart{
+    margin: 1% 1%;
+
 }
 
 /* Style for the product cards */
@@ -245,4 +377,151 @@ button {
   color: white;
   background-color: #5bbb1f;
   border: 1px solid #79db40;
+}
+
+/* -----CALL TO ACTION---- */
+
+.calltoaction {
+  padding: 1%;
+  background: linear-gradient(45deg, #5fbca0, #8bd8a8, #c3fdb8);
+  color: black;
+  margin-bottom: 3%;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.7);
+  text-align: center;
+}
+
+.h1 {
+  font-size: 45px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+.lead {
+  font-size: 18px;
+  font-family: "Maven Pro", sans-serif;
+  font-weight: bold;
+}
+
+.btn-shopnow {
+  background: var(--background-color);
+  color: #fff;
+  transition: 0.5s;
+}
+
+.btn-shopnow:hover {
+  background-color: var(--background-color);
+  color: #fff;
+}
+
+
+/*----------------------footer styling---------------------*/
+
+.fa,
+.fa-solid,
+.fa-brands {
+  font-size: 22px;
+  color: black;
+}
+
+footer {
+  background-color: #fff;
+  color: black;
+  padding: 30px 0;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.quick-links,
+.social-media,
+.newsletter,
+.supported-orgs {
+  flex: 1;
+  margin-right: 30px;
+}
+
+/* Give more space to newsletter section */
+.newsletter {
+  flex: 2;
+}
+
+.quick-links ul,
+.social-media ul,
+.supported-orgs ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.quick-links a,
+.social-media a,
+.supported-orgs a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.social-media ul li a i {
+  font-size: 20px;
+}
+
+.newsletter form {
+  display: flex;
+}
+
+.newsletter input[type="email"] {
+  flex: 1;
+  padding: 10px;
+
+  border-radius: 3px 0 0 3px;
+}
+
+.newsletter button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+  background-color: var(--background-color);
+  color: #fff;
+}
+@media (max-width: 767px) {
+  .footer-container {
+    flex-direction: column;
+  }
+  .quick-links,
+  .social-media,
+  .newsletter,
+  .supported-orgs {
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+}
+@media (max-width: 991px) {
+  .footer-container {
+    justify-content: center;
+  }
+  .supported-orgs {
+    margin-right: 0;
+  }
+}
+}
+
+/* Give more space to newsletter section */
+/* Give more space to newsletter section */
+.newsletter {
+  flex: 2;
+}
+
+/*----------------------final footer styling---------------------*/
+
+.final-footer {
+  padding: 1% 4%;
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  justify-content: center;
+  background: rgba(201, 226, 101, 0.2);
 }
