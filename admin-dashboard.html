@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Admin Dashboard</title>
+    <style>
+      :root {
+        --primary-color: #3bb33b;
+        --danger-color: #d9534f;
+        --light-color: #f8f8f8;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f1f1f1;
+      }
+
+      #sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 100%;
+        background-color: var(--primary-color);
+        color: #fff;
+        padding: 20px;
+        text-align: left;
+      }
+
+      #sidebar h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      #sidebar ul {
+        list-style: none;
+        margin-top: 20px;
+        padding-left: 0;
+      }
+
+      #sidebar li {
+        margin-bottom: 10px;
+      }
+
+      #sidebar a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+        border-radius: 5px;
+        transition: background-color 0.2s ease-in-out;
+      }
+
+      #sidebar a:hover {
+        background-color: #fff;
+        color: var(--primary-color);
+      }
+
+      #content {
+        margin-left: 200px;
+        padding: 20px;
+      }
+
+      #content section {
+        border: 1px solid var(--primary-color);
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        padding: 20px;
+      }
+
+      #content section h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      #content section p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 10px;
+      }
+
+      #content .btn-primary {
+        background-color: var(--primary-color);
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.2s ease-in-out;
+      }
+
+      #content .btn-primary:hover {
+        background-color: #fff;
+        color: var(--primary-color);
+      }
+
+      #content .btn-danger {
+        background-color: var(--danger-color);
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.2s ease-in-out;
+      }
+
+      #content .btn-danger:hover {
+        background-color: #fff;
+        color: var(--danger-color);
+      }
+    </style>
+  </head>
+  <body>
+    <script src="data.js"></script>
+    <script src="dashboard.js"></script>
+    <nav id="sidebar">
+      <h1>Admin</h1>
+      <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Orders</a></li>
+        <li>
+          <a href="#" id="customer-section">Customers</a>
+        </li>
+        <li>
+          <a href="#" id="seller-section">Farmer Vendors</a>
+        </li>
+        <li><a href="#">Reports</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+    </nav>
+    <main id="content">
+      <h1>Dashboard</h1>
+      <section>
+        <h2>Total Sales</h2>
+        <p>Php 10,000</p>
+        <a href="#" class="btn-primary">View Details</a>
+      </section>
+      <section>
+        <h2>Recent Orders</h2>
+        <p>No recent orders.</p>
+      </section>
+      <section>
+        <h2>Top Products</h2>
+        <p>No top products.</p>
+      </section>
+      <section>
+        <h2>Latest Customers</h2>
+        <p>No latest customers.</p>
+      </section>
+    </main>
+  </body>
+</html>
